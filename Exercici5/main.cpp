@@ -106,7 +106,7 @@ int main(int argn, char** argv)
                 cout << cand.actual() << ", ";
                 cand.seguent();
             }
-            cout << "}";
+            cout << "}" << endl;
             return 0;
         }
     }
