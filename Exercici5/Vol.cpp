@@ -8,7 +8,12 @@ Vol::Vol(int id, string tipus, int hores, int minuts) : id(id), tipus(tipus), ho
 
 }
 
-void Vol::imprimir_vol() const
+void Vol::imprimir_vol() const 
 {
-    cout << id << tipus << hores << minuts << endl;
+    cout << "Vol: " << id << "\t" << tipus << " ";
+    if(hores<10) cout << "0" << hores;
+    else cout << hores;
+    cout << ":";
+    if(minuts == 0) cout << "00" << endl;
+    else cout << minuts << endl;
 }
