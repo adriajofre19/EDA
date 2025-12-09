@@ -16,7 +16,7 @@ int Mobilitat::llegirDades(const string& path)
     string linia;
     vector<string> items;
     f.open(path);
-    int n_files;
+    int n_files = 0;
     if(!f.fail())
     {
         getline(f, linia);
@@ -28,8 +28,7 @@ int Mobilitat::llegirDades(const string& path)
          int any = stoi(items[1]);
          int ordre = stoi(items[2]);
          string tipusDesplacament = items[3];
-         int horaIn  = stoi(items[4]);
-         // cout << id << ";" << any << ";" << ordre << ";" << tipusDesplacament << ";" << horaIn << endl;
+         int horaIn = stoi(items[4]);
          n_files ++;
          getline(f, linia);
       }
